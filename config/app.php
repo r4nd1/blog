@@ -136,6 +136,9 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Illuminate\View\ViewServiceProvider::class,
+        Illuminate\Html\HtmlServiceProvider::class,
+
 
         /*
          * Application Service Providers...
@@ -143,6 +146,9 @@ return [
         App\Providers\AppServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
+
+        GrahamCampbell\HTMLMin\HTMLMinServiceProvider::class, // minify laravel
 
     ],
 
@@ -191,6 +197,11 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
+
+       'Form'      => Illuminate\Html\FormFacade::class,
+      'HTML'      => Illuminate\Html\HtmlFacade::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'HTMLMin'   => GrahamCampbell\HTMLMin\Facades\HTMLMin::class, // minify html
 
     ],
 
